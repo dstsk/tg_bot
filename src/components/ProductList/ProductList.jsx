@@ -9,6 +9,7 @@ const products = [
     {id: '3', title: 'Футболка', price: 2000, description: 'Целая'},
     {id: '4', title: 'Трусы', price: 500, description: 'Кельвин кляйн'},
     {id: '5', title: 'Кепка', price: 1500, description: 'Как у фифтисента'},
+    {id: '6', title: 'Носки', price: 50, description: 'Короткие'},
 ]
 
 const getTotalPrice = (items = []) => {
@@ -44,7 +45,7 @@ const ProductList = () => {
     }
 
     return (
-        <div>
+        <div className={'list'}>
             {products.map(item =>
                 <ProductItem
                     product   = { item }
