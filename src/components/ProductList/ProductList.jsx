@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './ProductList.css'
 import ProductItem from "../ProductItem/ProductItem";
 import {useTelegram} from "../../hooks/useTelegram";
@@ -21,7 +21,7 @@ const ProductList = () => {
     const [addedItems, setAddedItems] = useState([])
     const {tg} = useTelegram()
 
-    const onAdd = () => {
+    const onAdd = (product) => {
         const alreadyAdded = addedItems.find(item => item.id === product.id)
         let newItems = []
 
