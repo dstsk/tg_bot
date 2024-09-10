@@ -7,7 +7,7 @@ const ProductItem = ({product, className, onAdd}) => {
         onAdd(product)
     }
     return (
-        <div className={'product' + className}>
+        <div className={'product ' + className}>
             <div className={'img'}/>
             <div className={'title'} children={product.title}/>
             <div className={'description'} children={product.description}/>
