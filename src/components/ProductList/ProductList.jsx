@@ -20,6 +20,7 @@ const getTotalPrice = (items = []) => {
 
 const ProductList = () => {
     const [addedItems, setAddedItems] = useState([])
+    const [test, setTest] = useState('')
     const {tg, queryId} = useTelegram()
 
     const onSendData = useCallback(() => {
@@ -34,6 +35,7 @@ const ProductList = () => {
             },
             body: JSON.stringify(data)
         })
+        setTest('TEST')
         tg.sendData(JSON.stringify(data))
     }, [products, queryId])
 
@@ -68,6 +70,7 @@ const ProductList = () => {
 
     return (
         <div className={'list'}>
+            <div>{ test }</div>
             {products.map(item =>
                 <ProductItem
                     product   = { item }
