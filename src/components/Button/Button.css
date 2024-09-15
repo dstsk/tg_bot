@@ -4,5 +4,5 @@
     color: var(--tg-theme-button-text-color);
     border: none;
     outline: none;
-    cursor: none;
+    cursor: pointer;
 }

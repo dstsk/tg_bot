@@ -7,20 +7,20 @@ import ProductList from "./components/ProductList/ProductList";
 import Form from "./components/Form/Form";
 
 function App() {
-    const {tg, onToggleButton} = useTelegram();
+    const {onToggleButton, tg} = useTelegram();
 
     useEffect(() => {
-        tg.ready()
+        tg.ready();
     }, [])
 
     return (
-    <div className = "App">
-        <Header/>
-        <Routes>
-            <Route index element ={ <ProductList/> } />
-            <Route path = 'form' element={ <Form /> } />
-        </Routes>
-    </div>
+        <div className="App">
+            <Header />
+            <Routes>
+                <Route index element={<ProductList />}/>
+                <Route path={'form'} element={<Form />}/>
+            </Routes>
+        </div>
     );
 }
 

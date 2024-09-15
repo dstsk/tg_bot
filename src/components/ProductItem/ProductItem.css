@@ -6,12 +6,13 @@
     width: 170px;
 }
 
+
 .img {
     width: 100%;
+    background: lightgray;
     height: 100px;
     margin: 0 auto;
     background: var(--tg-theme-button-color);
-    background: lightgray;
 }
 
 .description {
@@ -20,5 +21,4 @@
 
 .add-btn {
     width: 100%;
-    background: aqua;
 }
